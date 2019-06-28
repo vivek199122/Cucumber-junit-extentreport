@@ -83,7 +83,8 @@ public class BaseTestScript {
 	@BeforeTest
 	public static void beoferTest() throws IOException {
 		driver = setUp();
-		driver.navigate().to("https://testoam.secure.fedex.com/oam/server/obrareq.cgi?encquery%3DQK0xaQxrwBQRW56DEq894MLBJ5gbH5NeEQ3RuVWvocbN%2BcHQ9udhBUeSq9qyPHU9bsWMmiyCGoxJUns%2BpraQw%2BDDo%2BmFrETLWQs2XnN%2B4CjGsiXEr8h2bxBxARORpDWfAd05bR0P43ZNrzJFALGf2s3f42TLyfwgkR0hJHpHqvqD3Bjzpu6gGZDiz%2FkQD4VkFz4zcTc5bVKlLmDmL4VuKo9AaqBq4wWlkIME40h3A8WELTJUMfGvArvmDy7EvtFa%2BjiHg7kSKUeeKgtV71sy8P9YD8o9NkfbvccYlcy3DGKAHGlrjMv5DNii%2FQ1u06sNyCpG%2BFgif5PfEKEvQ0HQ6AREcL9IoIdm6qSXjY0WvD0%3D%20agentid%3DWTCApacheWebgate%20ver%3D1%20crmethod%3D2%26cksum%3D02dbf3eaa886477a1f19d33be9cfdb0fd6c3f1aa");
+		//driver.navigate().to("https://testoam.secure.fedex.com/oam/server/obrareq.cgi?encquery%3DQK0xaQxrwBQRW56DEq894MLBJ5gbH5NeEQ3RuVWvocbN%2BcHQ9udhBUeSq9qyPHU9bsWMmiyCGoxJUns%2BpraQw%2BDDo%2BmFrETLWQs2XnN%2B4CjGsiXEr8h2bxBxARORpDWfAd05bR0P43ZNrzJFALGf2s3f42TLyfwgkR0hJHpHqvqD3Bjzpu6gGZDiz%2FkQD4VkFz4zcTc5bVKlLmDmL4VuKo9AaqBq4wWlkIME40h3A8WELTJUMfGvArvmDy7EvtFa%2BjiHg7kSKUeeKgtV71sy8P9YD8o9NkfbvccYlcy3DGKAHGlrjMv5DNii%2FQ1u06sNyCpG%2BFgif5PfEKEvQ0HQ6AREcL9IoIdm6qSXjY0WvD0%3D%20agentid%3DWTCApacheWebgate%20ver%3D1%20crmethod%3D2%26cksum%3D02dbf3eaa886477a1f19d33be9cfdb0fd6c3f1aa");
+		driver.navigate().to("https://www.google.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
