@@ -22,7 +22,7 @@ public class CaptureScreenShot {
 		Reporter.assignAuthor("ToolsQA - Lakshay Sharma");
 	}
 
-	@After(order = 1)
+	@After(order = 0)
 	public void afterScenario(Scenario scenario) {
 		if (scenario.isFailed()) {
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
@@ -35,18 +35,20 @@ public class CaptureScreenShot {
 				// folder
 				File destinationPath = new File(System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/"
 						+ screenshotName + ".png");
+				
+				System.out.println(System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/");
 
 				// Copy taken screenshot from source location to destination location
 				Files.copy(sourcePath, destinationPath);
 
-				// This attach the specified screenshot to the test
+				// This attach the specified screenshot to the test	
 				Reporter.addScreenCaptureFromPath(destinationPath.toString());
 			} catch (IOException e) {
 			}
 		}
 	}
 
-	@After(order = 0)
+	@After(order = 1)
 	public void AfterSteps() {
 		BaseTestScript.tearDown();
 	}

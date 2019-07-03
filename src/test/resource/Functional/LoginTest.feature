@@ -1,6 +1,17 @@
 Feature: Log into home.fedex.com
 
 
+
+@LoginTest1 
+Scenario: Log into Dock only pass
+Given User on login page
+
+
+       
+
+
+
+
 @LoginTest 
 Scenario Outline: Log into Dock & Yard successfully
 Given User on login page

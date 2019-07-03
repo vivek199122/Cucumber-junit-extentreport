@@ -39,6 +39,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
 			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
@@ -53,7 +54,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jun 28, 2019 12:09:14 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 28, 2019 09:47:41 PM</span>
 				</a>
 			</li>
 			<li>
@@ -93,6 +94,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@LoginTest1</a></li>
 					<li><a href='#'>@LoginTest</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -156,10 +158,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -171,10 +173,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='42.857%'><span class='strong'>3</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>2</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='28.571%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='28.571%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -191,18 +193,38 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Log into home.fedex.com</span>
-						<span class='test-time'>Jun 28, 2019 12:09:14 AM</span>
+						<span class='test-time'>Jun 28, 2019 09:47:41 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 25s+404ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@LoginTest1</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+215ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Log into Dock only pass</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User on login page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='4' status='fail'>
+	<span class='duration right label'>0h 0m 25s+937ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Log into Dock & Yard successfully</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='5' class='node scenario fail' status='fail'>
 			<div class='category-list'>
 				<span class='category label white-text'>@LoginTest</span>
 			</div>
@@ -212,11 +234,11 @@
 			<span class="bdd-step-name">Log into Dock & Yard successfully</span>
 			
 				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+					<li test-id='6' class='node given pass' status='pass'><b>Given</b>
 						<span class="bdd-step-name">Given User on login page</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='5' class='node when fail' status='fail'><b>When</b>
+					<li test-id='7' class='node when fail' status='fail'><b>When</b>
 						<span class="bdd-step-name">When User enters "3795600" and "3795600" and clicks on login button</span>
 							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"username"}
   (Session info: chrome=75.0.3770.100)
@@ -226,8 +248,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'Viveks-MacBook-Pro.local', ip: 'fe80:0:0:0:1c01:ebc1:9e39:76ab%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58872}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
-Session ID: c05760d4354e8816557d9c93d3139232
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61389}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: a816f129d0b0d619a3eff4903f9c5b17
 *** Element info: {Using=id, value=username}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -247,17 +269,20 @@ Session ID: c05760d4354e8816557d9c93d3139232
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 	at coreClasses.BasePageObject.sendkeys(BasePageObject.java:80)
 	at pageObjects.FedexHome.doLogin(FedexHome.java:31)
-	at webStepDef.stepdefinition.doLogin(stepdefinition.java:39)
-	at ✽.When User enters "3795600" and "3795600" and clicks on login button(LoginTest.feature:7)
+	at webStepDef.stepdefinition.doLogin(stepdefinition.java:47)
+	at ✽.When User enters "3795600" and "3795600" and clicks on login button(LoginTest.feature:18)
 </pre></div>
 					</li>
-					<li test-id='6' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='8' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then User closes browser</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="/Users/vivek/Downloads/HRO-Exit/target/cucumber-reports/Log_into_Dock_&_Yard_successfully.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
 							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
-		<li test-id='7' class='node scenario fail' status='fail'>
+		<li test-id='9' class='node scenario fail' status='fail'>
 			<div class='category-list'>
 				<span class='category label white-text'>@LoginTest</span>
 			</div>
@@ -267,11 +292,11 @@ Session ID: c05760d4354e8816557d9c93d3139232
 			<span class="bdd-step-name">Log into Dock & Yard successfully</span>
 			
 				<ul class='steps'>
-					<li test-id='8' class='node given pass' status='pass'><b>Given</b>
+					<li test-id='10' class='node given pass' status='pass'><b>Given</b>
 						<span class="bdd-step-name">Given User on login page</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='9' class='node when fail' status='fail'><b>When</b>
+					<li test-id='11' class='node when fail' status='fail'><b>When</b>
 						<span class="bdd-step-name">When User enters "3795600" and "3791600" and clicks on login button</span>
 							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"username"}
   (Session info: chrome=75.0.3770.100)
@@ -281,8 +306,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'Viveks-MacBook-Pro.local', ip: 'fe80:0:0:0:1c01:ebc1:9e39:76ab%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58891}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
-Session ID: 81f3295a597e44b4c32e9a64feaa41bc
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61410}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 9b1743c32281d1f561c890fa3b00fa2a
 *** Element info: {Using=id, value=username}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -302,13 +327,14 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 	at coreClasses.BasePageObject.sendkeys(BasePageObject.java:80)
 	at pageObjects.FedexHome.doLogin(FedexHome.java:31)
-	at webStepDef.stepdefinition.doLogin(stepdefinition.java:39)
-	at ✽.When User enters "3795600" and "3791600" and clicks on login button(LoginTest.feature:7)
+	at webStepDef.stepdefinition.doLogin(stepdefinition.java:47)
+	at ✽.When User enters "3795600" and "3791600" and clicks on login button(LoginTest.feature:18)
 </pre></div>
 					</li>
-					<li test-id='10' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='12' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then User closes browser</span>
 						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="/Users/vivek/Downloads/HRO-Exit/target/cucumber-reports/Log_into_Dock_&_Yard_successfully.png"><i class='material-icons'>panorama</i></a></li>
 							<li><a data-featherlight="image" href="/Users/vivek/Downloads/HRO-Exit/target/cucumber-reports"><i class='material-icons'>panorama</i></a></li>
 						</ul>
 							<div class='pre'>skipped</div>
@@ -371,6 +397,40 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@LoginTest1</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 28, 2019 09:47:41 PM</td>
+										<td class='linked' test-id='2'>Log into home.fedex.com.Log into Dock only pass</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@LoginTest</span>
 						<span class='category-status right'>
 							<span class='label fail'>2</span>
@@ -394,13 +454,13 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 28, 2019 12:09:14 AM</td>
-										<td class='linked' test-id='3'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
+										<td>Jun 28, 2019 09:47:44 PM</td>
+										<td class='linked' test-id='5'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jun 28, 2019 12:09:28 AM</td>
-										<td class='linked' test-id='7'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
+										<td>Jun 28, 2019 09:47:57 PM</td>
+										<td class='linked' test-id='9'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -420,6 +480,86 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 	</div>
 </div>
 <!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>ToolsQA-LakshaySharma</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>1</span>
+                                        <span class='label fail'>2</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 1</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 2</span>
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Jun 28, 2019 09:47:41 PM</td>
+                                                <td class='linked' test-id='2'>Log into home.fedex.com.Log into Dock only pass</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jun 28, 2019 09:47:44 PM</td>
+                                                <td class='linked' test-id='5'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jun 28, 2019 09:47:57 PM</td>
+                                                <td class='linked' test-id='9'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
 <div id='exception-view' class='view hide'>
 
     <section id='controls'>
@@ -462,8 +602,8 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Jun 28, 2019 12:09:18 AM</td>
-                                                        <td class='linked' test-id='5'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully.When User enters "3795600" and "3795600" and clicks on login button</td>
+                                                        <td>Jun 28, 2019 09:47:46 PM</td>
+                                                        <td class='linked' test-id='7'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully.When User enters "3795600" and "3795600" and clicks on login button</td>
                                                         <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"username"}
   (Session info: chrome=75.0.3770.100)
   (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
@@ -472,8 +612,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'Viveks-MacBook-Pro.local', ip: 'fe80:0:0:0:1c01:ebc1:9e39:76ab%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58872}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
-Session ID: c05760d4354e8816557d9c93d3139232
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61389}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: a816f129d0b0d619a3eff4903f9c5b17
 *** Element info: {Using=id, value=username}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -493,13 +633,13 @@ Session ID: c05760d4354e8816557d9c93d3139232
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 	at coreClasses.BasePageObject.sendkeys(BasePageObject.java:80)
 	at pageObjects.FedexHome.doLogin(FedexHome.java:31)
-	at webStepDef.stepdefinition.doLogin(stepdefinition.java:39)
-	at ✽.When User enters "3795600" and "3795600" and clicks on login button(LoginTest.feature:7)
+	at webStepDef.stepdefinition.doLogin(stepdefinition.java:47)
+	at ✽.When User enters "3795600" and "3795600" and clicks on login button(LoginTest.feature:18)
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Jun 28, 2019 12:09:30 AM</td>
-                                                        <td class='linked' test-id='9'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully.When User enters "3795600" and "3791600" and clicks on login button</td>
+                                                        <td>Jun 28, 2019 09:48:00 PM</td>
+                                                        <td class='linked' test-id='11'>Log into home.fedex.com.Log into Dock & Yard successfully.Log into Dock & Yard successfully.When User enters "3795600" and "3791600" and clicks on login button</td>
                                                         <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"username"}
   (Session info: chrome=75.0.3770.100)
   (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
@@ -508,8 +648,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'Viveks-MacBook-Pro.local', ip: 'fe80:0:0:0:1c01:ebc1:9e39:76ab%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58891}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
-Session ID: 81f3295a597e44b4c32e9a64feaa41bc
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578706 (5f725d1b4f0a4a..., userDataDir: /var/folders/zb/sk25mmq90j1...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61410}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 9b1743c32281d1f561c890fa3b00fa2a
 *** Element info: {Using=id, value=username}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -529,8 +669,8 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 	at coreClasses.BasePageObject.sendkeys(BasePageObject.java:80)
 	at pageObjects.FedexHome.doLogin(FedexHome.java:31)
-	at webStepDef.stepdefinition.doLogin(stepdefinition.java:39)
-	at ✽.When User enters "3795600" and "3791600" and clicks on login button(LoginTest.feature:7)
+	at webStepDef.stepdefinition.doLogin(stepdefinition.java:47)
+	at ✽.When User enters "3795600" and "3791600" and clicks on login button(LoginTest.feature:18)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -563,31 +703,31 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 28, 2019 12:09:14 AM</div>
+					<div class='panel-lead'>Jun 28, 2019 09:47:41 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 28, 2019 12:09:40 AM</div>
+			 		<div class='panel-lead'>Jun 28, 2019 09:48:11 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>25,485ms</div>
+					<div class='panel-lead'>29,882ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -623,6 +763,15 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@LoginTest1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@LoginTest</td>
 							<td>0</td>
 							<td>2</td>
@@ -652,7 +801,7 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 0,
+				passChild: 1,
 				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
@@ -661,7 +810,7 @@ Session ID: 81f3295a597e44b4c32e9a64feaa41bc
 				infoChild: 0,
 				exceptionsChild: 2,
 				
-				passGrandChild: 2,
+				passGrandChild: 3,
 				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

@@ -2,14 +2,22 @@ package webStepDef;
 
 
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
-import coreClasses.BaseTestScript;
+import com.cucumber.listener.Reporter;
+import com.google.common.io.Files;
 
+import coreClasses.BaseTestScript;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -55,6 +63,43 @@ public class stepdefinition extends BaseTestScript {
 	public void closeBrowser(){
 		BaseTestScript.tearDown();
 	}
+	
+	
+
+	@Before
+	public void beforeScenario(Scenario scenario) {
+		Reporter.assignAuthor("ToolsQA - Lakshay Sharma");
+	}
+
+	@After(order = 1)
+	public void afterScenario(Scenario scenario) {
+		if (scenario.isFailed()) {
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
+			try {
+				// This takes a screenshot from the driver at save it to the specified location
+				File sourcePath = ((TakesScreenshot) BaseTestScript.driver).getScreenshotAs(OutputType.FILE);
+
+				// Building up the destination path for the screenshot to save
+				// Also make sure to create a folder 'screenshots' with in the cucumber-report
+				// folder
+				File destinationPath = new File(System.getProperty("user.dir") + "/target/cucumber-reports/"
+						+ screenshotName + ".png");
+
+				// Copy taken screenshot from source location to destination location
+				Files.copy(sourcePath, destinationPath);
+
+				// This attach the specified screenshot to the test
+				Reporter.addScreenCaptureFromPath(destinationPath.toString());
+			} catch (IOException e) {
+			}
+		}
+	}
+
+	@After(order = 1)
+	public void AfterSteps() {
+		BaseTestScript.tearDown();
+	}
+	
 	
 
 }
